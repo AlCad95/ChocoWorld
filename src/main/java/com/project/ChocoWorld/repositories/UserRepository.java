@@ -1,6 +1,6 @@
 package com.project.ChocoWorld.repositories;
 
-import com.project.ChocolateWorld.entities.User;
+import com.project.ChocoWorld.entities.User;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
