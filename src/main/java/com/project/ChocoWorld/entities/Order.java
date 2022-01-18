@@ -45,7 +45,9 @@ public class Order {
         }
     }
 
-
+    public String getSumForDisplay(){
+        return Utils.moneyToDisplay(sum);
+   }
 
 
     public String getDateTimeForDisplay() {
