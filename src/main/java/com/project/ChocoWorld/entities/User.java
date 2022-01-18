@@ -4,7 +4,7 @@ import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-
+import com.project.ChocoWorld.utils.Utils;
 import javax.persistence.*;
 import java.util.Arrays;
 import java.util.Collection;
@@ -62,5 +62,8 @@ public class User implements UserDetails {
     @Override
     public boolean isEnabled() {
         return enabled;
+    }
+    public String getMoneyForDisplay(){
+        return Utils.moneyToDisplay(moneyBalance);
     }
 }

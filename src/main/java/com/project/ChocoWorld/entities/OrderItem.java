@@ -14,15 +14,15 @@ public class OrderItem {
 
     @ManyToOne
     @JoinColumn(name = "order_details_id")
-    private OrderDetail orderDetails;
+    private OrderDetail orderDetail;
 
     @OneToOne
     private Product product;
 
     private int quantity;
 
-    public OrderItem(OrderDetail orderDetails, Product product, int quantity) {
-        this.orderDetails = orderDetails;
+    public OrderItem(OrderDetail orderDetail, Product product, int quantity) {
+        this.orderDetail = orderDetail;
         this.product = product;
         this.quantity = quantity;
     }
