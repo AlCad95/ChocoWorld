@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title> Chocolate World</title>
+    <link th:href="@{/css/style.css}" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<h1>Welcome to Chocolate World</h1>
+<a th:href="@{/shop}" alt="Start buying"><img th:src="@{/img/logo.png}" id="welcome"/></a>
+<th:block th:include="/_footer"></th:block>
+</body>
+</html>
