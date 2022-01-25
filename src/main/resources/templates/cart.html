@@ -26,7 +26,7 @@
     </tr>
 </table>
 <h1 th:text="'Total sum: ' + ${order.getSumForDisplay()} + '$'"></h1>
-<i th:text="${msg}" class="msg"></i><br>
+<i th:text="${message}" class="message"></i><br>
 <a th:href="@{/shop/purchase}">PURCHASE</a>
 <a th:href="@{/shop}">CANCEL</a>
 <th:block th:include="/_footer"></th:block>
