@@ -19,7 +19,7 @@
              class="product" th:alt="${item.product.name}"/>
         <input type="number" min="0" th:max="${item.product.inStock}"
                th:field="*{orderItems[__${iter.index}__].quantity}" required>
-        <span th:if="${item.product.inStock == 0}" class="msg">Not available yet</span>
+        <span th:if="${item.product.inStock == 0}" class="message">Not available yet</span>
         </br>
         <span th:text="${item.product.name.toUpperCase()}"></span>
         </br>

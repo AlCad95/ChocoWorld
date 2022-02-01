@@ -9,3 +9,9 @@ PostgreSQL
 Hibernate (via Spring Data JPA)
 Thymeleaf
 Maven
+
+
+
+
+Username: user
+Password: pass
