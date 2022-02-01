@@ -30,7 +30,7 @@ public class ChocoWorldApplication {
 			if (((List) userRepository.findAll()).isEmpty()) {
 				User user = new User();
 				user.setUsername("user");
-				user.setPassword(passwordEncoder.encode("password"));
+				user.setPassword(passwordEncoder.encode("pass"));
 				user.setMoneyBalance(200);
 				userRepository.save(user);
 			}
