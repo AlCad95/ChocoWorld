@@ -15,13 +15,13 @@
 <h1>What would you like to choose?</h1>
 <form method="POST" th:object="${order.orderDetail}">
     <div th:each="item, iter : *{orderItems}">
-        <img th:src="${'/img/products/' + item.product.name + '.jpeg'}"
+        <img th:src="${'/img/products/' + item.product.name + '.jpg'}"
              class="product" th:alt="${item.product.name}"/>
         <input type="number" min="0" th:max="${item.product.inStock}"
                th:field="*{orderItems[__${iter.index}__].quantity}" required>
         <span th:if="${item.product.inStock == 0}" class="message">Not available yet</span>
         </br>
-        <span th:text="${item.product.name.toUpperCase()}"></span>
+        <span th:text="${item.product.name}"></span>
         </br>
         <span th:text="${item.product.getPriceForDisplay() + '$'}"></span>
         </br></br>
