@@ -26,7 +26,7 @@ public class ChocoWorldApplication {
 			// adds a new User
 			if (((List) userRepository.findAll()).isEmpty()) {
 				User user = new User();
-				user.setUsername("user");
+				user.setUsername("user1");
 				user.setPassword(passwordEncoder.encode("pass"));
 				user.setMoneyBalance(200);
 				userRepository.save(user);
