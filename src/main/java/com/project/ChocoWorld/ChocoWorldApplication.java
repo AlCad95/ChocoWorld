@@ -19,9 +19,6 @@ public class ChocoWorldApplication {
 	@Autowired
 	PasswordEncoder passwordEncoder;
 
-	public static void main(String[] args) {
-		SpringApplication.run(ChocoWorldApplication.class, args);
-	}
 
 	@Bean
 	public CommandLineRunner dataLoad(UserRepository userRepository, ProductRepository productRepository) {
@@ -37,29 +34,33 @@ public class ChocoWorldApplication {
 
 			// adds Product items if the DB
 			if (((List) productRepository.findAll()).isEmpty()) {
-				Product Hazelnut_Crisp_Milk_Chocolate_Bar = new Product("Hazelnut Crisp Milk Chocolate Bar", 6.5, 10);
-				Product Hazelnut_Crisp_Dark_Chocolate_Bar = new Product("Hazelnut Crisp Dark Chocolate Bar", 6.5, 10);
-				Product Virginia_Peanuts_in_Milk_Chocolate = new Product("Virginia Peanuts in Milk Chocolate", 11.9, 15);
-				Product Virginia_Peanuts_in_Dark_Chocolate = new Product("Virginia Peanuts in Dark Chocolate", 11.9, 10);
-				Product Sugar_Free_Solid_Dark_Chocolate_Bar = new Product("Sugar Free Solid Dark Chocolate Bar", 6.5, 15);
-				Product Sugar_Free_Solid_Milk_Chocolate_Bar = new Product("Sugar Free Solid Milk Chocolate Bar", 6.5, 15);
-				Product Assorted_Bridgewater_Truffles = new Product("12 pc. Assorted Bridgewater Truffles", 28.95, 10);
-				Product Almonds_in_Dark_Chocolate_Bar = new Product("Almonds in Dark Chocolate Bar", 6.5, 10);
-				Product Almonds_in_Milk_Chocolate_Bar = new Product("Almonds in Milk Chocolate Bar", 6.5, 15);
-				Product Pretzels_in_Chocolate = new Product("Pretzels in Chocolate", 20.5, 10);
+				Product HazelnutCrispMilkChocolateBar = new Product("HazelnutCrispMilkChocolateBar", 6.5, 10);
+				Product HazelnutCrispDarkChocolateBar = new Product("HazelnutCrispDarkChocolateBar", 6.5, 10);
+				Product VirginiaPeanutsMilkChocolate = new Product("VirginiaPeanutsMilkChocolate", 11.9, 15);
+				Product VirginiaPeanutsDarkChocolate = new Product("VirginiaPeanutsDarkChocolate", 11.9, 10);
+				Product SugarFreeSolidDarkChocolateBar = new Product("SugarFreeSolidDarkChocolateBar", 6.5, 15);
+				Product SugarFreeSolidMilkChocolateBar = new Product("SugarFreeSolidMilkChocolateBar", 6.5, 15);
+				Product AssortedBridgewaterTruffles = new Product("AssortedBridgewaterTruffles", 28.95, 10);
+				Product AlmondsDarkChocolateBar = new Product("AlmondsDarkChocolateBar", 6.5, 10);
+				Product AlmondsMilkChocolateBar = new Product("AlmondsMilkChocolateBar", 6.5, 15);
+				Product PretzelsChocolate = new Product("PretzelsChocolate", 20.5, 10);
 
-				productRepository.save(Hazelnut_Crisp_Milk_Chocolate_Bar);
-				productRepository.save(Hazelnut_Crisp_Dark_Chocolate_Bar);
-				productRepository.save(Virginia_Peanuts_in_Milk_Chocolate);
-				productRepository.save(Virginia_Peanuts_in_Dark_Chocolate);
-				productRepository.save(Sugar_Free_Solid_Dark_Chocolate_Bar);
-				productRepository.save(Sugar_Free_Solid_Milk_Chocolate_Bar);
-				productRepository.save(Assorted_Bridgewater_Truffles);
-				productRepository.save(Almonds_in_Dark_Chocolate_Bar);
-				productRepository.save(Almonds_in_Milk_Chocolate_Bar);
-				productRepository.save(Pretzels_in_Chocolate);
+				productRepository.save(HazelnutCrispMilkChocolateBar);
+				productRepository.save(HazelnutCrispDarkChocolateBar);
+				productRepository.save(VirginiaPeanutsMilkChocolate);
+				productRepository.save(VirginiaPeanutsDarkChocolate);
+				productRepository.save(SugarFreeSolidDarkChocolateBar);
+				productRepository.save(SugarFreeSolidMilkChocolateBar);
+				productRepository.save(AssortedBridgewaterTruffles);
+				productRepository.save(AlmondsDarkChocolateBar);
+				productRepository.save(AlmondsMilkChocolateBar);
+				productRepository.save(PretzelsChocolate);
 			}
 		};
-	}
 
+	}
+	public static void main(String[] args) {
+		SpringApplication.run(ChocoWorldApplication.class, args);
+	}
 }
+
